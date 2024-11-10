@@ -31,7 +31,8 @@ echo "export WARDEN_PORT="18"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
-# download binary
+**download binary**
+```
 cd $HOME
 rm -rf bin
 mkdir bin && cd bin
@@ -39,6 +40,7 @@ wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.5.3/
 unzip wardend_Linux_x86_64.zip
 chmod +x wardend
 mv $HOME/bin/wardend $HOME/go/bin
+```
 
 # config and init app
 wardend init $MONIKER
