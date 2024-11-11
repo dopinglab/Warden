@@ -42,9 +42,11 @@ chmod +x wardend
 mv $HOME/bin/wardend $HOME/go/bin
 ```
 
-# config and init app
+**config and init app**
+```
 wardend init $MONIKER
 sed -i -e "s|^node *=.*|node = \"tcp://localhost:${WARDEN_PORT}657\"|" $HOME/.warden/config/client.toml
+```
 
 # download genesis and addrbook
 wget -O $HOME/.warden/config/genesis.json https://server-4.itrocket.net/testnet/warden/genesis.json
