@@ -54,11 +54,13 @@ wget -O $HOME/.warden/config/genesis.json https://server-4.itrocket.net/testnet/
 wget -O $HOME/.warden/config/addrbook.json  https://server-4.itrocket.net/testnet/warden/addrbook.json
 ```
 
-# set seeds and peers
+**set seeds and peers**
+```
 SEEDS="8288657cb2ba075f600911685670517d18f54f3b@warden-testnet-seed.itrocket.net:18656"
 PEERS="b14f35c07c1b2e58c4a1c1727c89a5933739eeea@warden-testnet-peer.itrocket.net:18656,0fb6439f5e2cfc8622501769bb071076bce9dfc1@116.202.150.231:18656,ade613e0a08bcf22d8ae6da3bed7b692992f0aeb@213.199.38.94:31656,eb2e7095f86b24e8d5d286360c34e060a8db6334@188.40.85.207:12756,3bc060a19fa237fc632273414dd1e9551ad0b312@65.109.88.159:56656,29dfeed0f7933111c5452a1af4ca67b2fe4346f5@198.27.80.53:26656,d8d46d0175fe948529aa52d696e2fcf50691c492@162.55.97.180:15656,252cfe526707952ba2fb557b460161208901a973@82.208.22.200:26656,8f50605a5cd64c735f86ffc22f2dd0177bcc58b3@168.119.120.156:26656,1c1451d7cb1d6cb556343848aa2001fc96953346@62.171.181.179:18656,968d83090c18ef4ad87aedc803fa4edd82ea4b6d@5.75.160.247:18656"
 sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*seeds *=.*/seeds = \"$SEEDS\"/}" \
        -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.warden/config/config.toml
+```
 
 **set custom ports in app.toml**
 ```
