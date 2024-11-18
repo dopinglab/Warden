@@ -97,7 +97,8 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.warden/config/config.
 sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.warden/config/config.toml
 ```
 
-# create service file
+**create service file**
+```
 sudo tee /etc/systemd/system/wardend.service > /dev/null <<EOF
 [Unit]
 Description=Warden node
@@ -112,6 +113,7 @@ LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
 EOF
+```
 
 # reset and download snapshot
 wardend tendermint unsafe-reset-all --home $HOME/.warden
