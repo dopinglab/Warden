@@ -124,7 +124,8 @@ if curl -s --head curl https://server-4.itrocket.net/testnet/warden/warden_2024-
   echo "no snapshot found"
 fi
 ```
-# enable and start service
+**enable and start service**
+```
 sudo systemctl daemon-reload
 sudo systemctl enable wardend
 sudo systemctl restart wardend && sudo journalctl -u wardend -f
@@ -132,6 +133,8 @@ Automatic Installation
 pruning: custom: 100/0/19 | indexer: null
 
 source <(curl -s https://itrocket.net/api/testnet/warden/autoinstall/)
+```
+
 Create wallet
 # to create a new wallet, use the following command. don’t forget to save the mnemonic
 wardend keys add $WALLET
