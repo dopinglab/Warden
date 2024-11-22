@@ -141,8 +141,10 @@ Create wallet
 wardend keys add $WALLET
 ```
 
-# to restore exexuting wallet, use the following command
+**to restore exexuting wallet, use the following command**
+```
 wardend keys add $WALLET --recover
+```
 
 # save wallet and validator address
 WALLET_ADDRESS=$(wardend keys show $WALLET -a)
